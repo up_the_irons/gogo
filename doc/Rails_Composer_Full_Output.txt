@@ -1,0 +1,898 @@
+Full Output of Rails Composer::
+
+  [garry@garry-thinkpad] ~/dev/gogo (master) $ rails new web -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+        create
+        create  README.rdoc
+        create  Rakefile
+        create  config.ru
+        create  .gitignore
+        create  Gemfile
+        create  app
+        create  app/assets/images/rails.png
+        create  app/assets/javascripts/application.js
+        create  app/assets/stylesheets/application.css
+        create  app/controllers/application_controller.rb
+        create  app/helpers/application_helper.rb
+        create  app/views/layouts/application.html.erb
+        create  app/mailers/.gitkeep
+        create  app/models/.gitkeep
+        create  config
+        create  config/routes.rb
+        create  config/application.rb
+        create  config/environment.rb
+        create  config/environments
+        create  config/environments/development.rb
+        create  config/environments/production.rb
+        create  config/environments/test.rb
+        create  config/initializers
+        create  config/initializers/backtrace_silencers.rb
+        create  config/initializers/inflections.rb
+        create  config/initializers/mime_types.rb
+        create  config/initializers/secret_token.rb
+        create  config/initializers/session_store.rb
+        create  config/initializers/wrap_parameters.rb
+        create  config/locales
+        create  config/locales/en.yml
+        create  config/boot.rb
+        create  config/database.yml
+        create  db
+        create  db/seeds.rb
+        create  doc
+        create  doc/README_FOR_APP
+        create  lib
+        create  lib/tasks
+        create  lib/tasks/.gitkeep
+        create  lib/assets
+        create  lib/assets/.gitkeep
+        create  log
+        create  log/.gitkeep
+        create  public
+        create  public/404.html
+        create  public/422.html
+        create  public/500.html
+        create  public/favicon.ico
+        create  public/index.html
+        create  public/robots.txt
+        create  script
+        create  script/rails
+        create  tmp/cache
+        create  tmp/cache/assets
+        create  vendor/assets/javascripts
+        create  vendor/assets/javascripts/.gitkeep
+        create  vendor/assets/stylesheets
+        create  vendor/assets/stylesheets/.gitkeep
+        create  vendor/plugins
+        create  vendor/plugins/.gitkeep
+         apply  https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+      composer  WOOT! The recipes you've selected are known to work together.
+      composer  Using rails_apps_composer recipes to generate an application.
+        insert    config/application.rb
+        recipe  Running core recipe...
+          core  selected all core recipes
+        recipe  Running git recipe...
+           git  initialize git
+        remove    .gitignore
+        create    .gitignore
+           run    git init from "."
+  Initialized empty Git repository in /home/garry/dev/gogo/web/.git/
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: initial commit" from "."
+        recipe  Running railsapps recipe...
+      question  Install an example application for Rails 3.2?
+            1)  I want to build my own application
+            2)  membership/subscription/saas
+            3)  rails-prelaunch-signup
+            4)  rails3-bootstrap-devise-cancan
+            5)  rails3-devise-rspec-cucumber
+            6)  rails3-mongoid-devise
+            7)  rails3-mongoid-omniauth
+            8)  rails3-subdomains
+     railsapps  Enter your selection: 2
+      question  Billing with Stripe or Recurly?
+            1)  Stripe
+            2)  Recurly
+     railsapps  Enter your selection: 1
+        recipe  Running setup recipe...
+         setup  Your operating system is linux-gnu.
+         setup  You are using Ruby version 1.9.3.
+         setup  You are using Rails version 3.2.13.
+      question  Web server for development?
+            1)  WEBrick (default)
+            2)  Thin
+            3)  Unicorn
+            4)  Puma
+            5)  Phusion Passenger (Apache/Nginx)
+            6)  Phusion Passenger (Standalone)
+         setup  Enter your selection: 1
+      question  Web server for production?
+            1)  Same as development
+            2)  Thin
+            3)  Unicorn
+            4)  Puma
+            5)  Phusion Passenger (Apache/Nginx)
+            6)  Phusion Passenger (Standalone)
+         setup  Enter your selection: 5
+      question  Template engine?
+            1)  ERB
+            2)  Haml
+            3)  Slim
+         setup  Enter your selection: 2
+      question  Continuous testing?
+            1)  None
+            2)  Guard
+         setup  Enter your selection: 1
+        create    README
+        append    README
+        recipe  Running readme recipe...
+        recipe  Running gems recipe...
+        insert    Gemfile
+          gsub    Gemfile
+          gsub    Gemfile
+          gsub    Gemfile
+          gsub    Gemfile
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: Gemfile" from "."
+        recipe  Running testing recipe...
+        recipe  Running email recipe...
+        recipe  Running models recipe...
+        recipe  Running controllers recipe...
+        recipe  Running views recipe...
+        recipe  Running routes recipe...
+        recipe  Running frontend recipe...
+        recipe  Running init recipe...
+        recipe  Running apps4 recipe...
+        recipe  Running prelaunch recipe...
+        recipe  Running prelaunch recipe...
+        recipe  Running extras recipe...
+        extras  Set a robots.txt file to ban spiders? (y/n) n
+        extras  Create a GitHub repository? (y/n) n
+        extras  Use or create a project-specific rvm gemset? (y/n) n
+        extras  recipe setting quiet_assets for reduced asset pipeline logging
+        extras  recipe creating application.yml file for environment variables with figaro
+        extras  recipe adding better_errors gem
+        extras  Add 'therubyracer' JavaScript runtime (for Linux users without node.js)? (y/n) n
+      composer  Installing gems. This will take a while.
+           run    bundle install --without production from "."
+  Fetching gem metadata from https://rubygems.org/.........
+  Fetching gem metadata from https://rubygems.org/..
+  Resolving dependencies...
+  Using rake (10.2.2)
+  Using i18n (0.6.1)
+  Using multi_json (1.9.2)
+  Using activesupport (3.2.13)
+  Using builder (3.0.4)
+  Using activemodel (3.2.13)
+  Using erubis (2.7.0)
+  Using journey (1.0.4)
+  Using rack (1.4.5)
+  Using rack-cache (1.2)
+  Using rack-test (0.6.2)
+  Using hike (1.2.3)
+  Using tilt (1.4.1)
+  Using sprockets (2.2.2)
+  Using actionpack (3.2.13)
+  Using mime-types (1.25.1)
+  Using polyglot (0.3.4)
+  Using treetop (1.4.15)
+  Using mail (2.5.4)
+  Using actionmailer (3.2.13)
+  Using arel (3.0.3)
+  Using tzinfo (0.3.39)
+  Using activerecord (3.2.13)
+  Using activeresource (3.2.13)
+  Installing addressable (2.3.6)
+  Installing atomic (1.1.16)
+  Installing bcrypt (3.1.7)
+  Installing coderay (1.1.0)
+  Installing better_errors (1.1.0)
+  Installing debug_inspector (0.0.2)
+  Installing binding_of_caller (0.7.2)
+  Installing sass (3.3.4)
+  Installing bootstrap-sass (2.3.2.2)
+  Using bundler (1.3.5)
+  Installing cancan (1.6.10)
+  Installing mini_portile (0.5.3)
+  Installing nokogiri (1.6.1)
+  Installing xpath (2.0.0)
+  Installing capybara (2.2.1)
+  Installing coffee-script-source (1.7.0)
+  Installing execjs (2.0.2)
+  Installing coffee-script (2.2.0)
+  Using rack-ssl (1.3.4)
+  Using json (1.8.1)
+  Using rdoc (3.12.2)
+  Using thor (0.19.1)
+  Using railties (3.2.13)
+  Installing coffee-rails (3.2.2)
+  Installing diff-lcs (1.2.5)
+  Installing gherkin (2.12.2)
+  
+  Installing multi_test (0.1.1)
+  Installing cucumber (1.3.14)
+  Using rails (3.2.13)
+  Installing cucumber-rails (1.4.0)
+  Installing database_cleaner (1.0.1)
+  Installing orm_adapter (0.5.0)
+  Installing thread_safe (0.3.1)
+  Installing warden (1.2.3)
+  Installing devise (3.2.4)
+  Installing launchy (2.4.2)
+  Installing email_spec (1.5.0)
+  Installing factory_girl (4.4.0)
+  Installing factory_girl_rails (4.4.1)
+  Installing figaro (0.7.0)
+  Installing haml (4.1.0.beta.1)
+  Installing haml-rails (0.4)
+  Installing hpricot (0.8.6)
+  Installing sexp_processor (4.4.3)
+  Installing ruby_parser (3.1.3)
+  Installing html2haml (1.0.1)
+  Installing jquery-rails (3.1.0)
+  Installing quiet_assets (1.0.2)
+  Installing rails_layout (1.0.13)
+  Installing rest-client (1.6.7)
+  Installing rolify (3.4.0)
+  Installing rspec-core (2.14.8)
+  Installing rspec-expectations (2.14.5)
+  Installing rspec-mocks (2.14.6)
+  Installing rspec-rails (2.14.2)
+  Installing sass-rails (3.2.6)
+  Installing simple_form (2.1.1)
+  Installing sqlite3 (1.3.9)
+  Installing stripe (1.10.1)
+  Installing stripe_event (1.1.0)
+  Installing uglifier (2.5.0)
+  Your bundle is complete!
+  Gems in the group production were not installed.
+  Use `bundle show [gemname]` to see where a bundled gem is installed.
+  Post-install message from haml:
+  
+  HEADS UP! Haml 4.0 has many improvements, but also has changes that may break
+  your application:
+  
+  * Support for Ruby 1.8.6 dropped
+  * Support for Rails 2 dropped
+  * Sass filter now always outputs <style> tags
+  * Data attributes are now hyphenated, not underscored
+  * html2haml utility moved to the html2haml gem
+  * Textile and Maruku filters moved to the haml-contrib gem
+  
+  For more info see:
+  
+  http://rubydoc.info/github/haml/haml/file/CHANGELOG.md
+  
+      composer  Updating gem paths.
+      composer  Running 'after bundler' callbacks.
+      composer  importing html2haml conversion tool
+  gems
+           run    bundle exec rake db:create:all from "."
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: create database" from "."
+  gems
+          gems  recipe installing simple_form for use with Bootstrap
+      generate    simple_form:install --bootstrap
+        create  config/initializers/simple_form.rb
+        create  config/initializers/simple_form_bootstrap.rb
+         exist  config/locales
+        create  config/locales/simple_form.en.yml
+        create  lib/templates/haml/scaffold/_form.html.haml
+  ===============================================================================
+  
+    Be sure to have a copy of the Bootstrap stylesheet available on your
+    application, you can get it on http://twitter.github.com/bootstrap.
+  
+    Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+    classes, '.form-horizontal', '.form-inline', '.form-search' or
+    '.form-vertical', as the following:
+  
+      = simple_form_for(@user, :html => {:class => 'form-horizontal' }) do |form|
+  
+  ===============================================================================
+      generate    figaro:install
+        create  config/application.yml
+        append  .gitignore
+          gsub    config/application.yml
+          gsub    config/application.yml
+       prepend    config/application.yml
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: generators" from "."
+  testing
+       testing  recipe running after 'bundle install'
+       testing  recipe installing RSpec
+      generate    rspec:install
+        create  .rspec
+        create  spec
+        create  spec/spec_helper.rb
+        remove    spec/spec_helper.rb
+        create    spec/spec_helper.rb
+      generate    email_spec:steps
+        create  features/step_definitions/email_steps.rb
+        insert    spec/spec_helper.rb
+        insert    spec/spec_helper.rb
+           run    rm -rf test/ from "."
+        insert    config/application.rb
+        create    spec/support/devise.rb
+       testing  recipe installing Cucumber
+      generate    cucumber:install --capybara --rspec
+        create  config/cucumber.yml
+        create  script/cucumber
+         chmod  script/cucumber
+         exist  features/step_definitions
+        create  features/support
+        create  features/support/env.rb
+         exist  lib/tasks
+        create  lib/tasks/cucumber.rake
+          gsub  config/database.yml
+          gsub  config/database.yml
+         force  config/database.yml
+          gsub    config/cucumber.yml
+        create    features/support/email_spec.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: testing framework" from "."
+  email
+         email  recipe running after 'bundle install'
+          gsub    config/environments/development.rb
+          gsub    config/environments/development.rb
+        insert    config/environments/test.rb
+          gsub    config/environments/production.rb
+        insert    config/environments/development.rb
+        insert    config/environments/production.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: set email accounts" from "."
+  models
+        models  recipe running after 'bundle install'
+          gsub    config/application.rb
+      generate    devise:install
+        create  config/initializers/devise.rb
+        create  config/locales/devise.en.yml
+  ===============================================================================
+  
+  Some setup you must do manually if you haven't yet:
+  
+    1. Ensure you have defined default url options in your environments files. Here
+       is an example of default_url_options appropriate for a development environment
+       in config/environments/development.rb:
+  
+         config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  
+       In production, :host should be set to the actual host of your application.
+  
+    2. Ensure you have defined root_url to *something* in your config/routes.rb.
+       For example:
+  
+         root to: "home#index"
+  
+    3. Ensure you have flash messages in app/views/layouts/application.html.erb.
+       For example:
+  
+         <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p>
+  
+    4. If you are deploying on Heroku with Rails 3.2 only, you may want to set:
+  
+         config.assets.initialize_on_precompile = false
+  
+       On config/application.rb forcing your application to not access the DB
+       or load models when precompiling your assets.
+  
+    5. You can copy Devise views (for customization) to your app by running:
+  
+         rails g devise:views
+  
+  ===============================================================================
+      generate    devise user
+        invoke  active_record
+        create    db/migrate/20140330065337_devise_create_users.rb
+        create    app/models/user.rb
+        invoke    rspec
+        create      spec/models/user_spec.rb
+        invoke      factory_girl
+        create        spec/factories/users.rb
+        insert    app/models/user.rb
+         route  devise_for :users
+      generate    migration AddNameToUsers name:string
+        invoke  active_record
+        create    db/migrate/20140330065354_add_name_to_users.rb
+        remove    app/models/user.rb
+        create    app/models/user.rb
+          gsub    config/initializers/devise.rb
+      generate    cancan:ability
+        create  app/models/ability.rb
+        remove    app/models/ability.rb
+        create    app/models/ability.rb
+        insert    app/models/user.rb
+      generate    rolify Role User
+        invoke  active_record
+        create    app/models/role.rb
+        invoke    rspec
+        create      spec/models/role_spec.rb
+        invoke      factory_girl
+        create        spec/factories/roles.rb
+        insert    app/models/role.rb
+        create    db/migrate/20140330065427_rolify_create_roles.rb
+        insert  app/models/user.rb
+        create  config/initializers/rolify.rb
+  ===============================================================================
+  
+  An initializer file has been created here: config/initializers/rolify.rb, you
+  can change rolify settings to match your needs.
+  Defaults values are commented out.
+  
+  A Role class has been created in app/models (with the name you gave as
+  argument otherwise the default is role.rb), you can add your own business logic
+  inside.
+  
+  Inside your User class (or the name you gave as argument otherwise the default
+  is user.rb), rolify method has been inserted to provide rolify methods.
+  
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: models" from "."
+  controllers
+    controllers  recipe running after 'bundle install'
+        insert    app/controllers/application_controller.rb
+      generate    controller home --skip-assets --skip-helper
+  [WARN] table 'Role' doesn't exist. Did you run the migration ? Ignoring rolify config.
+        create  app/controllers/home_controller.rb
+        invoke  haml
+        create    app/views/home
+        invoke  rspec
+        create    spec/controllers/home_controller_spec.rb
+        remove    app/controllers/users_controller.rb
+        create    app/controllers/users_controller.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: controllers" from "."
+  views
+         views  recipe running after 'bundle install'
+        remove    app/views/devise/shared/_links.html.erb
+        remove    app/views/devise/shared/_links.html.haml
+        create    app/views/devise/shared/_links.html.haml
+        remove    app/views/devise/registrations/edit.html.erb
+        remove    app/views/devise/registrations/edit.html.haml
+        create    app/views/devise/registrations/edit.html.haml
+        remove    app/views/devise/registrations/new.html.erb
+        remove    app/views/devise/registrations/new.html.haml
+        create    app/views/devise/registrations/new.html.haml
+        remove    app/views/devise/sessions/new.html.erb
+        remove    app/views/devise/sessions/new.html.haml
+        create    app/views/devise/sessions/new.html.haml
+        remove    app/helpers/application_helper.rb
+        create    app/helpers/application_helper.rb
+        remove    app/views/home/index.html.erb
+        remove    app/views/home/index.html.haml
+        create    app/views/home/index.html.haml
+        remove    app/views/users/index.html.erb
+        remove    app/views/users/index.html.haml
+        create    app/views/users/index.html.haml
+        remove    app/views/users/_user.html.erb
+        remove    app/views/users/_user.html.haml
+        create    app/views/users/_user.html.haml
+        remove    app/views/users/show.html.erb
+        remove    app/views/users/show.html.haml
+        create    app/views/users/show.html.haml
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: views" from "."
+  routes
+        routes  recipe running after 'bundle install'
+        remove    config/routes.rb
+        create    config/routes.rb
+          gsub    config/routes.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: routes" from "."
+  frontend
+      frontend  recipe running after 'bundle install'
+      generate    layout:install bootstrap2 -f
+  [WARN] table 'Role' doesn't exist. Did you run the migration ? Ignoring rolify config.
+        remove  app/assets/stylesheets/application.css
+        create  app/assets/stylesheets/application.css.scss
+        create  app/assets/stylesheets/framework_and_overrides.css.scss
+         force  app/assets/javascripts/application.js
+        remove  app/assets/stylesheets/simple.css
+        remove  app/assets/stylesheets/foundation_and_overrides.css.scss
+          gsub  app/assets/javascripts/application.js
+        remove  app/views/layouts/application.html.erb
+        create  app/views/layouts/application.html.haml
+          gsub  app/views/layouts/application.html.haml
+        create  app/views/layouts/_messages.html.haml
+        create  app/views/layouts/_navigation.html.haml
+        create  app/views/layouts/_navigation_links.html.erb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: front-end framework" from "."
+      composer  Running 'after everything' callbacks.
+  readme
+        readme  recipe running after everything
+        remove    README
+        remove    README.rdoc
+        remove    doc/README_FOR_APP
+        remove    public/humans.txt
+        create    public/humans.txt
+        remove    README
+        create    README
+        remove    README.md
+        create    README.md
+          gsub    README
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README
+          gsub    README
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+          gsub    README.md
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: add README files" from "."
+  testing
+       testing  recipe running after everything
+       testing  copying RSpec files from the rails3-bootstrap-devise-cancan examples
+        remove    spec/factories/users.rb
+        create    spec/factories/users.rb
+        remove    spec/controllers/home_controller_spec.rb
+        create    spec/controllers/home_controller_spec.rb
+        remove    spec/controllers/users_controller_spec.rb
+        create    spec/controllers/users_controller_spec.rb
+        remove    spec/models/user_spec.rb
+        create    spec/models/user_spec.rb
+        remove    spec/views/home/index.html.erb_spec.rb
+        remove    spec/views/home/index.html.haml_spec.rb
+        remove    spec/views/users/show.html.erb_spec.rb
+        remove    spec/views/users/show.html.haml_spec.rb
+        remove    spec/helpers/home_helper_spec.rb
+        remove    spec/helpers/users_helper_spec.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: rspec files" from "."
+       testing  copying Cucumber scenarios from the rails3-bootstrap-devise-cancan examples
+        remove    spec/controllers/home_controller_spec.rb
+        create    spec/controllers/home_controller_spec.rb
+        remove    features/users/sign_in.feature
+        create    features/users/sign_in.feature
+        remove    features/users/sign_out.feature
+        create    features/users/sign_out.feature
+        remove    features/users/sign_up.feature
+        create    features/users/sign_up.feature
+        remove    features/users/user_edit.feature
+        create    features/users/user_edit.feature
+        remove    features/users/user_show.feature
+        create    features/users/user_show.feature
+        remove    features/step_definitions/user_steps.rb
+        create    features/step_definitions/user_steps.rb
+        remove    features/support/paths.rb
+        create    features/support/paths.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: cucumber files" from "."
+  init
+          init  recipe running after everything
+        append    config/application.yml
+        append    config/application.yml
+        append    config/application.yml
+        create    config/application.example.yml
+        append    db/seeds.rb
+        append    db/seeds.rb
+        append    db/seeds.rb
+        append    db/seeds.rb
+          init  applying migrations and seeding the database
+           run    bundle exec rake db:migrate from "."
+  ==  DeviseCreateUsers: migrating ==============================================
+  -- create_table(:users)
+     -> 0.0218s
+  -- add_index(:users, :email, {:unique=>true})
+     -> 0.0019s
+  -- add_index(:users, :reset_password_token, {:unique=>true})
+     -> 0.0018s
+  ==  DeviseCreateUsers: migrated (0.0260s) =====================================
+  
+  ==  AddNameToUsers: migrating =================================================
+  -- add_column(:users, :name, :string)
+     -> 0.0025s
+  ==  AddNameToUsers: migrated (0.0027s) ========================================
+  
+  ==  RolifyCreateRoles: migrating ==============================================
+  -- create_table(:roles)
+     -> 0.0036s
+  -- create_table(:users_roles, {:id=>false})
+     -> 0.0017s
+  -- add_index(:roles, :name)
+     -> 0.0015s
+  -- add_index(:roles, [:name, :resource_type, :resource_id])
+     -> 0.0017s
+  -- add_index(:users_roles, [:user_id, :role_id])
+     -> 0.0014s
+  ==  RolifyCreateRoles: migrated (0.0106s) =====================================
+  
+           run    bundle exec rake db:seed from "."
+  ROLES
+  role: admin
+  role: user
+  role: VIP
+  DEFAULT USERS
+  user: First User
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: set up database" from "."
+      generate    layout:navigation -f
+     identical  app/views/layouts/_navigation_links.html.erb
+        append  app/views/layouts/_navigation_links.html.erb
+        append  app/views/layouts/_navigation_links.html.erb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: navigation links" from "."
+  saas
+          saas  recipe running after 'bundle install'
+        remove    public/index.html
+        remove    app/assets/images/rails.png
+          gsub    Gemfile
+          gsub    Gemfile
+          gsub    config/routes.rb
+          gsub    config/routes.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: clean up starter app" from "."
+      generate    migration AddStripeToUsers customer_id:string last_4_digits:string
+        invoke  active_record
+        create    db/migrate/20140330065615_add_stripe_to_users.rb
+           run    bundle exec rake db:drop from "."
+           run    bundle exec rake db:migrate from "."
+  ==  DeviseCreateUsers: migrating ==============================================
+  -- create_table(:users)
+     -> 0.0175s
+  -- add_index(:users, :email, {:unique=>true})
+     -> 0.0018s
+  -- add_index(:users, :reset_password_token, {:unique=>true})
+     -> 0.0017s
+  ==  DeviseCreateUsers: migrated (0.0215s) =====================================
+  
+  ==  AddNameToUsers: migrating =================================================
+  -- add_column(:users, :name, :string)
+     -> 0.0024s
+  ==  AddNameToUsers: migrated (0.0026s) ========================================
+  
+  ==  RolifyCreateRoles: migrating ==============================================
+  -- create_table(:roles)
+     -> 0.0034s
+  -- create_table(:users_roles, {:id=>false})
+     -> 0.0015s
+  -- add_index(:roles, :name)
+     -> 0.0015s
+  -- add_index(:roles, [:name, :resource_type, :resource_id])
+     -> 0.0017s
+  -- add_index(:users_roles, [:user_id, :role_id])
+     -> 0.0017s
+  ==  RolifyCreateRoles: migrated (0.0105s) =====================================
+  
+  ==  AddStripeToUsers: migrating ===============================================
+  -- add_column(:users, :customer_id, :string)
+     -> 0.0022s
+  -- add_column(:users, :last_4_digits, :string)
+     -> 0.0022s
+  ==  AddStripeToUsers: migrated (0.0047s) ======================================
+  
+        remove    app/models/ability.rb
+        create    app/models/ability.rb
+        remove    app/models/user.rb
+        create    app/models/user.rb
+        remove    config/application.yml
+        create    config/application.yml
+        remove    config/application.example.yml
+        create    config/application.example.yml
+        remove    db/seeds.rb
+        create    db/seeds.rb
+        remove    config/initializers/stripe.rb
+        create    config/initializers/stripe.rb
+           run    bundle exec rake db:seed from "."
+  ROLES
+  role: admin
+  role: silver
+  role: gold
+  role: platinum
+  DEFAULT USERS
+  user: First User
+  users: Silver User, Gold User, Platinum User
+        remove    app/controllers/home_controller.rb
+        create    app/controllers/home_controller.rb
+      generate    controller content silver gold platinum --skip-assets --skip-helper
+        create  app/controllers/content_controller.rb
+         route  get "content/platinum"
+         route  get "content/gold"
+         route  get "content/silver"
+        invoke  haml
+        create    app/views/content
+        create    app/views/content/silver.html.haml
+        create    app/views/content/gold.html.haml
+        create    app/views/content/platinum.html.haml
+        invoke  rspec
+        create    spec/controllers/content_controller_spec.rb
+        remove    app/controllers/content_controller.rb
+        create    app/controllers/content_controller.rb
+        remove    app/controllers/registrations_controller.rb
+        create    app/controllers/registrations_controller.rb
+        remove    app/controllers/application_controller.rb
+        create    app/controllers/application_controller.rb
+        remove    app/controllers/users_controller.rb
+        create    app/controllers/users_controller.rb
+      generate    mailer UserMailer
+        create  app/mailers/user_mailer.rb
+        invoke  haml
+        create    app/views/user_mailer
+        invoke  rspec
+        create    spec/mailers/user_mailer_spec.rb
+        remove    app/mailers/user_mailer.rb
+        create    app/mailers/user_mailer.rb
+        remove    app/views/home/index.html.erb
+        remove    app/views/home/index.html.haml
+        create    app/views/home/index.html.haml
+        remove    app/views/layouts/_navigation.html.erb
+        remove    app/views/layouts/_navigation.html.haml
+        create    app/views/layouts/_navigation.html.haml
+        remove    app/views/devise/registrations/new.html.erb
+        remove    app/views/devise/registrations/new.html.haml
+        create    app/views/devise/registrations/new.html.haml
+        remove    app/views/devise/registrations/edit.html.erb
+        remove    app/views/devise/registrations/edit.html.haml
+        create    app/views/devise/registrations/edit.html.haml
+        remove    app/views/user_mailer/expire_email.html.erb
+        remove    app/views/user_mailer/expire_email.html.haml
+        create    app/views/user_mailer/expire_email.html.haml
+        remove    app/views/user_mailer/expire_email.text.erb
+        remove    app/views/user_mailer/expire_email.text.haml
+        create    app/views/user_mailer/expire_email.text.haml
+        remove    config/routes.rb
+        create    config/routes.rb
+          gsub    config/routes.rb
+        remove    app/assets/javascripts/application.js
+        create    app/assets/javascripts/application.js
+        remove    app/assets/javascripts/jquery.readyselector.js
+        create    app/assets/javascripts/jquery.readyselector.js
+        remove    app/assets/javascripts/jquery.externalscript.js
+        create    app/assets/javascripts/jquery.externalscript.js
+        remove    app/assets/javascripts/registrations.js
+        create    app/assets/javascripts/registrations.js
+        remove    app/assets/stylesheets/application.css.scss
+        create    app/assets/stylesheets/application.css.scss
+        remove    app/assets/stylesheets/pricing.css.scss
+        create    app/assets/stylesheets/pricing.css.scss
+          saas  copying RSpec tests from the rails-stripe-membership-saas examples
+        remove    spec/factories/roles.rb
+        create    spec/factories/roles.rb
+        remove    spec/models/user_spec.rb
+        create    spec/models/user_spec.rb
+        remove    spec/controllers/content_controller_spec.rb
+        create    spec/controllers/content_controller_spec.rb
+        remove    spec/mailers/user_mailer_spec.rb
+        create    spec/mailers/user_mailer_spec.rb
+        remove    spec/stripe/stripe_config_spec.rb
+        create    spec/stripe/stripe_config_spec.rb
+        remove    spec/support/stripe_helper.rb
+        create    spec/support/stripe_helper.rb
+        remove    spec/support/fixtures/success.json
+        create    spec/support/fixtures/success.json
+          saas  copying Cucumber scenarios from the rails-stripe-membership-saas examples
+        remove    features/users/user_show.feature
+        remove    features/support/paths.rb
+        create    features/support/paths.rb
+        remove    features/users/sign_in.feature
+        create    features/users/sign_in.feature
+        remove    features/users/sign_up.feature
+        create    features/users/sign_up.feature
+        remove    features/users/sign_up_with_stripe.feature
+        create    features/users/sign_up_with_stripe.feature
+        remove    features/users/user_edit.feature
+        create    features/users/user_edit.feature
+        remove    features/users/user_delete.feature
+        create    features/users/user_delete.feature
+        remove    features/step_definitions/user_steps.rb
+        create    features/step_definitions/user_steps.rb
+        remove    features/step_definitions/form_helper_steps.rb
+        create    features/step_definitions/form_helper_steps.rb
+        remove    config/locales/devise.en.yml
+        create    config/locales/devise.en.yml
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: membership app" from "."
+  extras
+        extras  recipe removing unnecessary files and whitespace
+        remove    public/index.html
+        remove    app/assets/images/rails.png
+          gsub    Gemfile
+          gsub    Gemfile
+          gsub    config/routes.rb
+          gsub    config/routes.rb
+           run    git add -A from "."
+           run    git commit -qm "rails_apps_composer: extras" from "."
+  # On branch master
+  nothing to commit, working directory clean
+      composer  Your new application will contain diagnostics in its README file.
+      composer  When reporting an issue on GitHub, include the README diagnostics.
+      composer  Finished running the rails_apps_composer app template.
+      composer  Your new Rails app is ready. Time to run 'bundle install'.
+           run  bundle install
+  Using rake (10.2.2)
+  Using i18n (0.6.1)
+  Using multi_json (1.9.2)
+  Using activesupport (3.2.13)
+  Using builder (3.0.4)
+  Using activemodel (3.2.13)
+  Using erubis (2.7.0)
+  Using journey (1.0.4)
+  Using rack (1.4.5)
+  Using rack-cache (1.2)
+  Using rack-test (0.6.2)
+  Using hike (1.2.3)
+  Using tilt (1.4.1)
+  Using sprockets (2.2.2)
+  Using actionpack (3.2.13)
+  Using mime-types (1.25.1)
+  Using polyglot (0.3.4)
+  Using treetop (1.4.15)
+  Using mail (2.5.4)
+  Using actionmailer (3.2.13)
+  Using arel (3.0.3)
+  Using tzinfo (0.3.39)
+  Using activerecord (3.2.13)
+  Using activeresource (3.2.13)
+  Using addressable (2.3.6)
+  Using atomic (1.1.16)
+  Using bcrypt (3.1.7)
+  Using coderay (1.1.0)
+  Using better_errors (1.1.0)
+  Using debug_inspector (0.0.2)
+  Using binding_of_caller (0.7.2)
+  Using sass (3.3.4)
+  Using bootstrap-sass (2.3.2.2)
+  Using cancan (1.6.10)
+  Using mini_portile (0.5.3)
+  Using nokogiri (1.6.1)
+  Using xpath (2.0.0)
+  Using capybara (2.2.1)
+  Using coffee-script-source (1.7.0)
+  Using execjs (2.0.2)
+  Using coffee-script (2.2.0)
+  Using rack-ssl (1.3.4)
+  Using json (1.8.1)
+  Using rdoc (3.12.2)
+  Using thor (0.19.1)
+  Using railties (3.2.13)
+  Using coffee-rails (3.2.2)
+  Using diff-lcs (1.2.5)
+  Using gherkin (2.12.2)
+  Using multi_test (0.1.1)
+  Using cucumber (1.3.14)
+  Using bundler (1.3.5)
+  Using rails (3.2.13)
+  Using cucumber-rails (1.4.0)
+  Using database_cleaner (1.0.1)
+  Using orm_adapter (0.5.0)
+  Using thread_safe (0.3.1)
+  Using warden (1.2.3)
+  Using devise (3.2.4)
+  Using launchy (2.4.2)
+  Using email_spec (1.5.0)
+  Using factory_girl (4.4.0)
+  Using factory_girl_rails (4.4.1)
+  Using figaro (0.7.0)
+  Using haml (4.1.0.beta.1)
+  Using haml-rails (0.4)
+  Using hpricot (0.8.6)
+  Using sexp_processor (4.4.3)
+  Using ruby_parser (3.1.3)
+  Using html2haml (1.0.1)
+  Using jquery-rails (3.1.0)
+  Using quiet_assets (1.0.2)
+  Using rails_layout (1.0.13)
+  Using rest-client (1.6.7)
+  Using rolify (3.4.0)
+  Using rspec-core (2.14.8)
+  Using rspec-expectations (2.14.5)
+  Using rspec-mocks (2.14.6)
+  Using rspec-rails (2.14.2)
+  Using sass-rails (3.2.6)
+  Using simple_form (2.1.1)
+  Using sqlite3 (1.3.9)
+  Using stripe (1.10.1)
+  Using stripe_event (1.1.0)
+  Using uglifier (2.5.0)
+  Your bundle is complete!
+  Gems in the group production were not installed.
+  Use `bundle show [gemname]` to see where a bundled gem is installed.
+  [garry@garry-thinkpad] ~/dev/gogo (master) $
